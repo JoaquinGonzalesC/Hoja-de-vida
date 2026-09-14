@@ -58,3 +58,34 @@ Estudiante de Comunicación Digital y Multimedia — Universidad Católica Boliv
 
 ---
 *Última actualización: 26 de agosto de 2026*
+
+
+
+#{
+    border:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family:arial, sans-serif;
+    font-size: 14px;
+}
+
+
+
+h1{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+address{
+    background-color: blue;
+    padding: 2px;
+}
+
+nav ul{
+    color:white;
+    background-color: blue;
+    list-style-type: none;
+}

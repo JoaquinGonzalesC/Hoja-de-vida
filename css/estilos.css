@@ -1,0 +1,49 @@
+#{
+    border:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.fotoin{
+    transform: translateX(2rem) translateY(-1rem);
+}
+
+header{
+    background-color: aqua;
+    border-radius: 20px;
+}
+
+ul{
+    transform: translateX(40px);
+}
+
+.Info{
+    background-color: aqua;
+    font-size:27px;
+    transform: translateX(25rem) translateY(-25rem);
+}
+
+.Info{
+    display:inline;
+    position: absolute ;
+    border-color: blue;
+    border-style: groove;
+}
+
+.myvacation{
+    background-color: aqua;
+}
+.sahara{
+    background-color: aqua;
+}
+
+h1{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 4rem;   
+}
+
+form{
+    color: rgb(255, 254, 254);
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCAaeVdKnE4i47Bhyp1DylZhV72UGCIFE8gc1o7cZCbw&s=10);
+}
