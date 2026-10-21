@@ -1,0 +1,18 @@
+
+:root {
+  --color-fondo: #f7f5fb;
+  --color-superficie: #ffffff;
+  --color-texto: #1b1a2b;
+  --color-texto-suave: #5b5870;
+  --color-acento: #261394;
+  --color-acento-2: #0e7c86;
+  --color-borde: #dcd8e8;
+
+  --fuente-titulo: "Fraunces", Georgia, serif;
+  --fuente-texto: "DM Sans", system-ui, sans-serif;
+
+  --radio: 14px;
+  --espacio: clamp(1rem, 4vw, 2rem);
+  --ancho-max: 1000px;
+  --alto-header: 64px;
+}

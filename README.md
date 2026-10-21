@@ -1,91 +1,80 @@
-# Hoja de Vida — Luis Joaquín Gonzales Costas
+# Hoja de Vida · Luis Joaquín Gonzales Costas
 
-Página web de currículum (CV) desarrollada en **HTML5 nativo**, sin dependencias de CSS ni JavaScript. El proyecto muestra el uso de etiquetas semánticas y elementos multimedia nativos del estándar HTML5.
+Página web personal de una sola página, responsiva, hecha con HTML, CSS y JavaScript puro (sin frameworks). Presenta perfil, formación, experiencia, habilidades, galería multimedia, investigaciones y un formulario de comentarios.
 
-## 📋 Descripción
+## Cómo verla
 
-Sitio de una sola página (single page) que presenta el perfil profesional, formación académica, experiencia laboral, habilidades, certificados, idiomas, proyectos destacados y portafolio multimedia de Luis Joaquín Gonzales Costas — comunicador digital, actor y cantante.
+1. Descarga o clona la carpeta completa del proyecto.
+2. Abre `index.html` en el navegador (doble clic).
 
-## 🛠️ Tecnologías utilizadas
+No necesita instalación ni servidor. Los archivos multimedia deben estar en las carpetas de `assets/` (ver más abajo).
 
-- **HTML5** — Maquetación semántica nativa (`header`, `main`, `section`, `article`, `nav`, `footer`)
-- Elementos multimedia nativos: `<video>`, `<audio>`, `<picture>`, `<figure>`
-- Formularios HTML5 con validación nativa (`required`, `pattern`, `minlength`, etc.)
-- Accesibilidad (ARIA): `role`, `aria-label`, `aria-describedby`, `aria-labelledby`
+## Estructura
 
-## 📂 Estructura del proyecto
-
+```
+/
 ├── index.html
+├── css/
+│   ├── variables.css    # colores, fuentes y medidas globales
+│   ├── base.css         # reinicio y estilos generales
+│   ├── otros.css        # estilos de estructura y otros componentes
+│   ├── contenido.css    # estilos del contenido de las secciones
+│   └── carousel.css     # estilos del carrusel 3D
+├── js/
+│   ├── main.js          # menú móvil y acordeón de Formación
+│   ├── carousel.js      # carrusel 3D de imágenes
+│   └── formulario.js    # formulario de comentario y ventana modal
 └── assets/
-├── imagenes/
-│ ├── fotoport.png
-│ └── pic.jpg
-├── videos/
-│ ├── sahara.mp4
-│ ├── stop.mp4
-│ └── dob.mp4
-└── audio/
-└── audio.mp3
+    ├── imagenes/        # fotoport.png, pic1–pic6, vacation, sahara, retodob
+    ├── videos/          # stop.mp4, sahara.mp4, dob.mp4
+    └── audio/           # audio.mp3, CA.mp3
+```
 
+El orden de los `<link>` en `index.html` importa: `variables` → `base` → `otros` → `contenido` → `carousel`.
 
-## 📑 Secciones incluidas
+## Secciones
 
-1. Perfil Profesional
-2. Formación Académica
-3. Experiencia Laboral
-4. Habilidades y Técnicas
-5. Certificados y Cursos
-6. Idiomas
-7. Proyectos Destacados
-8. Galería Multimedia
-9. Formulario de Contacto
+| Sección | ID | Contenido |
+|---|---|---|
+| Inicio | `#inicio` | Foto, nombre, frase, especialidad y datos de contacto |
+| Perfil | `#perfil` | Presentación personal |
+| Formación | `#formacion` | Desplegables: canto, doblaje, estudios básicos y académicos |
+| Experiencia | `#experiencia` | Padel 21, Epic The Musical y "Mi Padre" |
+| Habilidades | `#habilidades` | Tecnologías, herramientas y habilidades profesionales |
+| Galería | `#portafolio` | Carrusel de fotos, videos y audios |
+| Investigaciones | `#investigaciones` | Tarjetas con enlace externo |
+| Contacto | `#contacto` | Formulario de comentario con ventana modal |
 
-## 🚀 Cómo verlo
+Cada enlace del menú apunta al ID de su sección.
 
-1. Clona o descarga este repositorio.
-2. Asegúrate de que la carpeta `assets/` esté junto al archivo `index.html`.
-3. Abre `index.html` directamente en tu navegador (doble clic o clic derecho → "Abrir con").
+## Cómo editar el contenido
 
-## ✅ Estado del proyecto
+- **Colores, fuentes y espaciados:** `css/variables.css`.
+- **Foto de perfil:** reemplaza `assets/imagenes/fotoport.png`.
+- **Carrusel:** edita los `<img>` dentro de `<div class="carousel">`. Se necesitan **mínimo 5 imágenes**; si hay más, se muestran 5 a la vez y el resto aparece al avanzar. El texto `alt` de cada imagen es la descripción para lectores de pantalla.
+- **Videos y audios:** cambia el `src` del `<source>` y, en los videos, el `poster` (imagen de portada).
+- **Investigaciones:** cambia el `href` de "Ver más" y el texto de descripción de cada tarjeta.
+- **Experiencia y formación:** copia un bloque `<article class="experiencia">` o `<details class="acordeon__item">` existente y modifica sus datos.
 
-En desarrollo — mostrado como ejercicio académico de maquetación HTML5 semántica y accesible, sin uso de frameworks ni hojas de estilo externas.
+## Funcionamiento de las interacciones
 
-## 👤 Autor
+- **Menú:** en móvil se abre y cierra con el botón "Menú".
+- **Acordeón:** abre un desplegable de Formación.
+- **Carrusel:** botones anterior, siguiente y reproducción automática. Basado en [vanilla-js-carousel](https://github.com/) de Benjamin Kim (licencia MIT), adaptado para leer las imágenes desde el HTML.
+- **Formulario:** valida nombre y comentario, muestra el modal "¡Mensaje enviado!" y limpia los campos.
 
-**Luis Joaquín Gonzales Costas**  
-Estudiante de Comunicación Digital y Multimedia — Universidad Católica Boliviana  
-📧 luis.gonzales.c@ucb.edu.bo
+## Limitaciones y pendientes
 
----
-*Última actualización: 26 de agosto de 2026*
+- El formulario **no envía ni guarda** el comentario; solo muestra el modal. Para recibir los mensajes hay que conectarlo a un servicio (por ejemplo Formspree o EmailJS) o a un servidor.
+- La tarjeta "Amor líquido" aún tiene un enlace genérico (`docs.google.com`) y una descripción de ejemplo; la de la primera investigación también tiene descripción de ejemplo.
+- Algunos detalles de texto y marcado por revisar en `index.html`:
+  - en el bloque `<address>` queda una etiqueta `</a>` suelta después del correo;
+  - en el podcast aparece "Cambridege Analytica" y "analitica";
+  - en Galería, el título "Fotografias" lleva tilde ("Fotografías");
+  - el `<source>` del podcast (`CA.mp3`) no declara `type="audio/mpeg"`.
+- Los mapas de Google incrustados (`<iframe>`) dependen de conexión a internet.
 
+## Créditos
 
-
-#{
-    border:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body {
-    font-family:arial, sans-serif;
-    font-size: 14px;
-}
-
-
-
-h1{
-    font-weight: bold;
-    font-size: 16px;
-}
-
-address{
-    background-color: blue;
-    padding: 2px;
-}
-
-nav ul{
-    color:white;
-    background-color: blue;
-    list-style-type: none;
-}
+- Diseño y contenido: Luis Joaquín Gonzales Costas.
+- Carrusel 3D: Benjamin Kim, [vanilla-js-carousel](https://github.com/), licencia MIT.

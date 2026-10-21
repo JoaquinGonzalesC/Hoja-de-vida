@@ -1,0 +1,20 @@
+/* Reinicio y estilos generales de texto */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--alto-header); }
+body {
+  margin: 0;
+  font: 400 1.0625rem/1.65 var(--fuente-texto);
+  color: var(--color-texto);
+  background: var(--color-fondo);
+}
+img, video { max-width: 100%; display: block; }
+h1, h2, h3 { font-family: var(--fuente-titulo); line-height: 1.15; margin: 0 0 .6em; }
+h1 { font-size: clamp(2.2rem, 7vw, 3.8rem); font-weight: 800; }
+h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); }
+h3 { font-size: 1.2rem; }
+a { color: var(--color-acento); }
+:focus-visible { outline: 3px solid var(--color-acento-2); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}

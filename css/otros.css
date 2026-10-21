@@ -1,0 +1,74 @@
+/* Piezas reutilizables: botón, acordeón, experiencia, carrusel, media, tarjetas, formulario */
+.hero__foto { width: 100%; max-width: 280px; aspect-ratio: 3/4; object-fit: cover; border-radius: var(--radio); }
+.hero__rol { font: 600 1.3rem var(--fuente-titulo); color: var(--color-acento); margin: 0 0 1rem; }
+
+.boton, .nav__toggle {
+  font: 700 1rem var(--fuente-texto); cursor: pointer;
+  background: var(--color-acento); color: #fff; border: 0;
+  padding: .7rem 1.4rem; border-radius: 999px;
+}
+.boton:hover { background: #9c1049; }
+
+/* Acordeón (Formación) */
+.acordeon__item { background: var(--color-superficie); border: 1px solid var(--color-borde); border-radius: var(--radio); margin-bottom: 1rem; }
+.acordeon__item summary { padding: 1rem 1.25rem; font: 600 1.25rem var(--fuente-titulo); cursor: pointer; }
+.acordeon__cuerpo { display: grid; gap: 1rem; padding: 0 1.25rem 1.25rem; align-items: center; }
+.acordeon__cuerpo img { border-radius: 10px; width: 100%; }
+@media (min-width: 760px) { .acordeon__cuerpo { grid-template-columns: 1fr 260px; } }
+
+/* Experiencia */
+.experiencia { display: grid; gap: 1.5rem; align-items: center; }
+.experiencia dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: .4rem 1rem; }
+.experiencia dt { font-weight: 700; color: var(--color-texto-suave); }
+.experiencia dd { margin: 0; }
+.experiencia img { border-radius: var(--radio); width: 100%; }
+@media (min-width: 760px) { .experiencia { grid-template-columns: 1fr 340px; } }
+
+/* Video y audio */
+.media { margin: 0; }
+.media video { width: 100%; background: #000; border-radius: var(--radio); aspect-ratio: 16/9; object-fit: cover; }
+.media--vertical video { aspect-ratio: 9/16; max-height: 420px; margin: 0 auto; }
+.media audio { width: 100%; }
+.media figcaption p { margin: 0; color: var(--color-texto-suave); }
+
+/* Tarjetas (Investigaciones) */
+.tarjeta { background: var(--color-superficie); border: 1px solid var(--color-borde); border-radius: var(--radio); padding: 1.5rem; display: flex; flex-direction: column; }
+.tarjeta p { flex: 1; color: var(--color-texto-suave); }
+.tarjeta a { font-weight: 700; }
+
+
+
+.hero__frase { font: 600 1.25rem/1.4 var(--fuente-titulo); font-style: italic; color: var(--color-texto-suave); }
+address { font-style: normal; }
+.subtitulo { margin-top: 3rem; }
+.experiencia { margin-bottom: 1.5rem; padding: 1.5rem; background: var(--color-superficie); border: 1px solid var(--color-borde); border-radius: var(--radio); }
+.experiencia dl { grid-template-columns: 6rem 1fr; }
+.boton--sec { background: transparent; color: var(--color-acento); border: 2px solid var(--color-acento); }
+.boton--sec:hover { background: var(--color-borde); }
+mark { background: #f8d9e6; padding: 0 .2em; }
+
+
+.campo { display: grid; gap: .4rem; margin-bottom: 1rem; }
+.campo label { font-weight: 700; }
+.campo input, .campo textarea {
+  font: inherit; padding: .75rem; background: var(--color-superficie);
+  border: 1px solid var(--color-borde); border-radius: 10px;
+}
+.campo textarea { min-height: 130px; resize: vertical; }
+
+
+.modal {
+  display: none; position: fixed; inset: 0; z-index: 100; padding: 1rem;
+  align-items: center; justify-content: center; background: rgba(27, 26, 43, .6);
+}
+.modal-contenido {
+  width: min(100%, 380px); padding: 2rem; text-align: center;
+  background: var(--color-superficie); border-radius: var(--radio);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, .3);
+}
+.modal-contenido h2 { font-size: 1.6rem; }
+.icono-exito {
+  width: 64px; height: 64px; margin: 0 auto 1rem; border-radius: 50%;
+  display: grid; place-items: center; font-size: 2rem;
+  background: var(--color-acento-2); color: #fff;
+}

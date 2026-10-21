@@ -1,333 +1,317 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoja de Vida Joaquin Gonzales</title>
-    <link href="./css/estilos.css" rel="stylesheet" >
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hoja de Vida · Joaquín Gonzales</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/otros.css">
+  <link rel="stylesheet" href="css/contenido.css">
+  <link rel="stylesheet" href="css/carousel.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/carousel.js" defer></script>
+  <script src="js/formulario.js" defer></script>
 </head>
 
 <body>
-    <!-- CABECERA PRINCIPAL Y NAVEGACIÓN NATIVAS -->
-    <header role="banner">
-    <h1>Luis Joaquin Gonzales Costas</h1>
-   <div class="fotoin"> 
-    <img src="assets/imagenes/fotoport.png" width="300" height="400" 
-         alt="Fotografía de Joaquin Gonzales">
+<!-- CABECERA Y NAVEGACIÓN -->
+<header class="header" role="banner">
+  <nav class="nav" aria-label="Navegación principal del sitio">
+    <button class="nav__toggle" aria-expanded="false" aria-controls="menu">Menú</button>
+    <ul class="nav__list" id="menu">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#perfil">Perfil</a></li>
+      <li><a href="#formacion">Formación</a></li>
+      <li><a href="#experiencia">Experiencia</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#portafolio">Galería</a></li>
+      <li><a href="#investigaciones">Investigaciones</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+  <p class="header__redes">
+    Redes:
+    <a href="https://www.instagram.com/joaco_mapache?utm_source=qr&igsi=N2x5bm8zNDNwcDVp">Instagram: @Joaco_mapache</a> ·
+    <a href="https://www.tiktok.com/@joaco_mapache?_r=1&_t=ZS-99Der3wfq8Q">TikTok: @Joaco_El_mapache</a>
+  </p>
+</header>
+
+<main id="main-content" role="main">
+
+  <!-- INICIO -->
+  <section class="section hero" id="inicio">
+    <div class="fotoin">
+      <img class="hero__foto" src="assets/imagenes/fotoport.png"
+           width="300" height="400" alt="Fotografía de Joaquín Gonzales">
     </div>
     <div class="Info">
-    <h2>"Todo lo que hagas hazlo con excelencia."</h2>
-    <p>Comunicador digital, actor y cantante.</p>
-            <address>
-            La Paz, Bolivia<br>
-                Teléfono:+591 63098631</a><br>
-                 Instagram: 
-                <a href="https://www.instagram.com/joaco_mapache?utm_source=qr&igsi=N2x5bm8zNDNwcDVp">@Joaco_mapache</a><br>
-                 Tik-Tok: 
-                <a href="https://www.tiktok.com/@joaco_mapache?_r=1&_t=ZS-99Der3wfq8Q">@Joaco_El_mapache</a><br>
-                Correo electrónico: luis.gonzales.c@ucb.edu.bo<br>
-    </address>
-     </div>
-        <nav aria-label="Navegación principal del sitio">
+      <h1>Luis Joaquín Gonzales Costas</h1>
+      <h2 class="hero__frase">"Todo lo que hagas hazlo con excelencia."</h2>
+      <p class="hero__rol">Comunicador digital, actor y cantante.</p>
+      <address>
+        La Paz, Bolivia<br>
+        Teléfono: +591 63098631<br>
+        Correo: luis.gonzales.c@ucb.edu.bo</a>
+      </address>
+    </div>
+  </section>
+
+  <!-- PERFIL PROFESIONAL -->
+  <section class="section" id="perfil" aria-labelledby="perfil-heading">
+    <div class="contenedor contenedor--texto">
+      <h2 id="perfil-heading">Perfil profesional</h2>
+      <p>Me considero una persona <strong>activa y creativa</strong>, siempre predispuesta a realizar mi trabajo con lo mejor de mí. Disfruto asumir nuevos retos y aprender constantemente, buscando crecer tanto a nivel profesional como personal en cada proyecto que emprendo.</p>
+      <p><mark>Soy una persona que ama a Dios.</mark> Por eso considero que mis trabajos, mi desarrollo personal y cualquier actividad que realice deben hacerse con excelencia, <em><strong>como para Dios.</strong></em> Esta convicción me impulsa a actuar con responsabilidad, honestidad y compromiso en todo lo que hago.</p>
+      <p>Creo firmemente que la disciplina y la constancia son la base para alcanzar cualquier meta, y por ello me esfuerzo día a día por mejorar mis habilidades y aportar valor a cada equipo o proyecto del que formo parte.</p>
+    </div>
+  </section>
+
+  <!-- FORMACIÓN -->
+  <section class="section" id="formacion" aria-labelledby="formacion-heading">
+    <div class="contenedor">
+      <h2 id="formacion-heading">Formación</h2>
+      <div class="acordeon">
+
+        <details class="acordeon__item" open>
+          <summary>Canto</summary>
+          <div class="acordeon__cuerpo">
             <ul>
-                <button><a href="#perfil">Perfil Profesional</a></button>
-                <button><a href="#formacion">Formación Básica</a></button>
-                <button><a href="#experiencia">Experiencia Profesional</a></button>
-                <button><a href="#habilidades">Habilidades Técnicas</a></button>
-                <button><a href="#certificados">Certificación y Cursos</a></button>
-                <button><a href="#proyectos">Proyectos Destacados</a></button>
-                <button><a href="#portafolio">Portafolio Multimedia</a></button>
-                <button><a href="#contacto">Contacto</a></button>
+              <li>Clases de canto con Andrea Camacho · All That Jazz · <time datetime="2021-01-12">12/01/2021</time></li>
+              <li>Clases de canto con Ismael Cabrera · Sing Vocal Studios · <time datetime="2025-03-16">16/03/2025</time></li>
             </ul>
-        </nav>
-        <hr>
-    </header>
+          </div>
+        </details>
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <main id="main-content" role="main">
+        <details class="acordeon__item">
+          <summary>Doblaje</summary>
+          <div class="acordeon__cuerpo">
+            <ul>
+              <li>Introducción al doblaje con Lalo Garza · Proactiva · <time datetime="2020-11-27">27/11/2020</time></li>
+              <li>Seminario Internacional de Doblaje · Proactiva · <time datetime="2021-08-20">20/08/2021</time></li>
+              <li>Trimestre Online de Doblaje · La Productora · <time datetime="2025-03-11">11/03/2025</time></li>
+            </ul>
+  
+          </div>
+        </details>
 
-        <!-- SECCIÓN 1: PERFIL PROFESIONAL-->
-        <section id="perfil" aria-labelledby="perfil-heading">
-    <article>
-        <h3 id="perfil-heading">Perfil Profesional</h3>
-                <p>
-                   Me considero una persona <strong>activa y creativa</strong>,
-                   siempre predispuesta a realizar mi trabajo con lo mejor de mí. 
-                   Disfruto asumir nuevos retos y aprender constantemente, 
-                   buscando crecer tanto a nivel profesional como personal en cada proyecto que emprendo.
+        <details class="acordeon__item">
+          <summary>Estudios básicos y académicos</summary>
+          <div class="acordeon__cuerpo">
+            <ul>
+              <li><strong>Estudios fundamentales:</strong> Unidad Educativa Vida y Verdad · <time datetime="2012">2012</time> – <time datetime="2024">2024</time></li>
+              <li><strong>Comunicación Digital y Multimedia:</strong> Universidad Católica Boliviana · <time datetime="2025">2025</time> – <time datetime="2026">2026</time></li>
+            </ul>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3824.6120393391684!2d-68.09796952478592!3d-16.54567248420496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f2129d67d9b37%3A0x9bd0c8fbffb33232!2sTruth%20and%20Life%20Education%20Unit!5e0!3m2!1sen!2sbo!4v1792499783116!5m2!1sen!2sbo" width="250" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+        </details>
 
-                <p><mark>Soy una persona que ama a Dios.</mark> Por eso mismo considero que mis trabajos, mi desarrollo personal y 
-                cualquier actividad que realice deben hacerse con excelencia,<em><strong> como para Dios.</strong></em>  Esta convicción me impulsa a 
-                actuar con responsabilidad, honestidad y compromiso en todo lo que hago, procurando dar siempre lo mejor de 
-                mí mismo sin importar la magnitud de la tarea.</p>
+      </div>
+    </div>
+  </section>
 
-                <p>Creo firmemente que la disciplina y la constancia son la base para alcanzar cualquier meta, y por ello me 
-                esfuerzo día a día por mejorar mis habilidades y aportar valor a cada equipo o proyecto del que formo parte.
-                </p>
-            </article>
-        </section>
-        <hr>
+  <!-- EXPERIENCIA LABORAL -->
+  <section class="section" id="experiencia" aria-labelledby="experiencia-heading">
+    <div class="contenedor">
+      <h2 id="experiencia-heading">Experiencia laboral</h2>
 
-        <!-- SECCIÓN 2: FORMACION ACADEMICA -->
-        <section id="formacion" aria-labelledby="formacion-heading">
-            <h2 id="formacion-heading">Formación Académica</h2>
-<article>
-        <h3>Estudios Fundamentales</h3>
-        <p>Unidad Educativa Vida y Verdad.</p>
-        <time datetime="2022">2012</time> -
-        <time datetime="2026">2024</time>
-    </article>
+      <article class="experiencia">
+        <div>
+          <h3>Estratega de marketing</h3>
+          <dl>
+            <dt>Empresa</dt><dd>Padel 21</dd>
+            <dt>Periodo</dt><dd>Desde el 12 de agosto de 2025</dd>
+            <dt>Funciones</dt><dd>Gestión de las necesidades de la empresa para la creación de contenidos multimedia.</dd>
+            <dt>Logros</dt><dd>Experiencia en el área de marketing y generación de contenido.</dd>
+          </dl>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122417.50077253579!2d-68.1438756473707!3d-16.49846510590777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f219fc6f73f2d%3A0xeb82a549b94adb26!2sP%C3%A1del%20Club%2021!5e0!3m2!1ses-419!2sbo!4v1792546591804!5m2!1ses-419!2sbo" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </article>
 
-    <article>
-        <h3>Comunicación Digital y Multimedia</h3>
-        <p>Universidad Católica Boliviana.</p>
-        <time datetime="2022">2025</time> -
-        <time datetime="2026">2026</time>
-    </article>
-        <hr>
-    </section>
+      <article class="experiencia">
+        <div>
+          <h3>Ensamble y Ares · Epic The Musical</h3>
+          <dl>
+            <dt>Empresa</dt><dd>Sing Stars</dd>
+            <dt>Periodo</dt><dd>Noviembre 2025 – Enero 2026</dd>
+            <dt>Funciones</dt><dd>Participación en el musical "Epic" dentro del ensamble, en coros y escenas grupales, con ensayos regulares de canto, actuación y movimiento escénico.</dd>
+            <dt>Logros</dt><dd>Pasé del ensamble a interpretar el papel de Ares, con mayor responsabilidad escénica e interpretativa.</dd>
+          </dl>
+        </div>
+      </article>
 
-  <!-- SECCIÓN 3: EXPERIENCIA PROFESIONAL -->
-<section id="experiencia" aria-labelledby="experiencia-heading">
-    <h2 id="experiencia-heading">Experiencia Laboral</h2>
+      <article class="experiencia">
+        <div>
+          <h3>Protagonista (Carlos) · "Mi Padre"</h3>
+          <dl>
+            <dt>Dirección</dt><dd>Dafne Ozaky</dd>
+            <dt>Periodo</dt><dd>Marzo 2025</dd>
+            <dt>Funciones</dt><dd>Interpretación de Carlos, protagonista del cortometraje "Mi Padre".</dd>
+            <dt>Logros</dt><dd>Nominación a Mejor Actor en el Festival Nacional de Cortometrajes Leones de Fuego.</dd>
+          </dl>
+        </div>
+      </article>
+    </div>
+  </section>
 
-    <article>
-        <h4>Estratega de Marketing</h4>
-        <p><strong>Empresa:</strong> Padel 21</p>
-        <p><strong>Rol:</strong> Estratega de Marketing</p>
-        <p><strong>Periodo:</strong> 12 de agosto de 2025</p>
-        <p><strong>Descripción de funciones:</strong> Gestión de las necesidades de la empresa para la creación de contenidos multimedia.</p>
-        <p><strong>Principales logros:</strong> Adquisición de experiencia en el área de marketing y generación de contenido.</p>
-    </article>
-    <br>
+  <!-- HABILIDADES -->
+  <section class="section" id="habilidades" aria-labelledby="habilidades-heading">
+    <div class="contenedor">
+      <h2 id="habilidades-heading">Habilidades y técnicas</h2>
+      <div class="grid grid--3">
+        <div>
+          <h3>Tecnologías y lenguajes</h3>
+          <ul><li>HTML5</li><li>C++</li><li>JavaScript</li><li>Python</li><li>Visual Studio Code</li></ul>
+        </div>
+        <div>
+          <h3>Herramientas</h3>
+          <ul><li>Adobe Premiere</li><li>Excel</li><li>CapCut</li></ul>
+        </div>
+        <div>
+          <h3>Habilidades profesionales</h3>
+          <ul><li>Producción de videos</li><li>Análisis de métricas de contenidos</li><li>Investigación y análisis crítico de contenidos</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <article>
-        <h4>Ensamble / Ares — Epic The Musical</h4>
-        <p><strong>Empresa:</strong> Sing Stars</p>
-        <p><strong>Periodo:</strong> Noviembre 2025 – Enero 2026</p>
-        <p><strong>Descripción de funciones:</strong> Participación en el musical "Epic", integrando el ensamble en coros y escenas grupales, con ensayos regulares de canto, actuación y movimiento escénico.</p>
-        <p><strong>Principales logros:</strong> Progresé desde el ensamble hasta interpretar el papel de Ares, asumiendo mayor responsabilidad escénica e interpretativa dentro de la producción.</p>
-    </article>
-    <br>
+  <!-- GALERÍA-->
+  <section class="section" id="portafolio" aria-labelledby="portafolio-heading">
+    <div class="contenedor">
+      <h2 id="portafolio-heading">Galería de trabajos</h2>
+      <h3>Fotografias sacadas con un celular TECNO 30C.</h3>
 
-    <article>
-        <h4>Protagonista / Carlos — "Mi Padre" (Cortometraje)</h4>
-        <p><strong>Dirección:</strong> Dafne Ozaky</p>
-        <p><strong>Periodo:</strong> Marzo 2025</p>
-        <p><strong>Descripción de funciones:</strong> Interpretación del papel de Carlos, protagonista del cortometraje "Mi Padre", bajo la dirección de Dafne Ozaky.</p>
-        <p><strong>Principales logros:</strong> Nominación a Mejor Actor en el Festival Nacional de Cortometrajes Leones de Fuego.</p>
-    </article>
-</section>
-<br>
-<hr>
-            
-<!-- SECCIÓN 4: HABILIDADES Y TÉCNICAS-->
-<section id="habilidades" aria-labelledby="habilidades-heading">
-    <h2 id="habilidades-heading">Habilidades y Técnicas</h2>
+      <div class="carousel" role="region" aria-label="Galería de imágenes">
+        <img src="assets/imagenes/pic1.jpg"  alt="Imagen 1">
+        <img src="assets/imagenes/pic2.jpeg" alt="Imagen 2">
+        <img src="assets/imagenes/pic3.jpeg" alt="Imagen 3">
+        <img src="assets/imagenes/pic4.jpeg" alt="Imagen 4">
+        <img src="assets/imagenes/pic5.jpeg" alt="Imagen 5">
+        <img src="assets/imagenes/pic6.jpeg" alt="Imagen 6">
+      </div>
 
-    <h3>Tecnologías y lenguajes</h3>
-    <ul>
-        <li>HTML5</li>
-        <li>C++</li>
-        <li>JavaScript</li>
-        <li>Python</li>
-        <li>Visual Studio Code</li>
-    </ul>
+      <h2 class="subtitulo">Videos</h2>
+      <div class="grid grid--3">
+        <figure class="media myvacation">
+          <video controls preload="metadata" poster="assets/imagenes/vacation.jpeg" aria-label="Video My Vacation">
+            <source src="assets/videos/stop.mp4" type="video/mp4">
+          </video>
+          <figcaption>
+            <h4>My Vacation</h4>
+            <p>Stop motion hecho solo con papel y dibujos de Joaquín Gonzales.</p>
+            <p><strong>Herramientas:</strong> Stop Motion Studio y CapCut. <strong>Rol:</strong> director, productor y editor.</p>
+          </figcaption>
+        </figure>
 
-    <h3>Herramientas</h3>
-    <ul>
-        <li>Adobe Premiere</li>
-        <li>Excel</li>
-        <li>CapCut</li>
-    </ul>
+        <figure class="media sahara">
+          <video controls preload="metadata" poster="assets/imagenes/sahara.jpeg" aria-label="Tráiler Sahara">
+            <source src="assets/videos/sahara.mp4" type="video/mp4">
+          </video>
+          <figcaption>
+            <h4>Tráiler Sahara</h4>
+            <p>Material audiovisual corrupto, recuperado y editado por Joaquín Gonzales.</p>
+            <p><strong>Herramienta:</strong> Adobe Premiere. <strong>Rol:</strong> editor.</p>
+          </figcaption>
+        </figure>
 
-    <h3>Habilidades Profesionales</h3>
-    <ul>
-        <li>Producción de videos.</li>
-        <li>Análisis de métricas de contenidos.</li>
-        <li>Investigación y análisis crítico de contenidos.</li>
-    </ul>
-</section>
-<hr>
-   
-<!-- SECCIÓN 5: CERTIFICADOS Y CURSOS -->
- <section id="certificados" aria-labelledby="certificados-heading">
-            <h2 id="certificados-heading">Certificados y Cursos</h2>
-        <h4>En: </h4>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkkmoMAT4FZeDai3aIbvAyBTUVjlCCQW50a330oERzHg&s=10"
-            width="300px" height="200px">
-            <details>
-                <summary><strong>Canto</strong></summary>
-                <ul>
-                    <li>Clases de Canto con Andrea Camacho
-                    - All That Jazz - <time timedate="2021/01/12">2021/01/12</time>
-                    </li>
-                    <li>Clases de Canto con Ismael Cabrera
-                    - Sing Vocal Studios - <time timedate="2025/03/16">2025/03/16</time>
-                    </li>
-                </ul>
-            </details>
-            <br>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX7SCDkpH1MgjmXWps1D4UpqCDKeJtoEyOk6xi8mGJtQ&s=10"
-                width="300px" height="200px">
-            <details>
-                <summary><strong>Doblaje</strong></summary>
-                <ul>
-                    <li>Introducción al Doblaje con Lalo Graza
-                    -Proactiva <time timedate="2020/11/27">2020/11/27</time>
-                    </li>
-                    <li>Seminario Internacional de Doblaje
-                    -Proactiva <time timedate="2021/08/20">2021/08/20</time>
-                    </li>
-                    <li>Trimestre Online Doblaje 
-                    - La Productora <time timedate="2025/03/11">2025/03/11</time>
-                    </li>
-                </ul>
-            </details>
-        </section>
+        <figure class="media media--vertical">
+          <video controls preload="metadata" poster="assets/imagenes/retodob.jpeg" aria-label="Prueba de doblaje">
+            <source src="assets/videos/dob.mp4" type="video/mp4">
+            Tu navegador no admite video HTML5.
+          </video>
+          <figcaption>
+            <h4>Prueba de doblaje</h4>
+            <p>Práctica de los cursos de doblaje.</p>
+          </figcaption>
+        </figure>
+      </div>
 
-        <hr>
+      <h3 class="subtitulo">Audios</h3>
+      <div class="grid grid--2">
+        <figure class="media">
+          <audio controls preload="metadata" aria-label="Demo de voz">
+            <source src="assets/audio/audio.mp3" type="audio/mpeg">
+          </audio>
+          <figcaption>
+            <h4>Demo de voz</h4>
+            <p>Audio usado en la campaña de Titania's Spa, con participación de Joaquín Gonzales en la grabación.</p>
+          </figcaption>
+        </figure>
+        <figure class="media">
+          <audio controls preload="metadata" aria-label="Podcast Cambridge Analytica">
+            <source src="assets/audio/CA.mp3"> 
+          </audio>
+          <figcaption>
+            <h4>Podcast Cambridege Analytica</h4>
+            <p>Un análisis del caso de Cambridege analitica y la capacidad de creer fakenews.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
 
-<!-- SECCIÓN 7: PROYECTOS DESTACADOS -->
-        <section id="proyectos" aria-labelledby="proyectos-heading">
-            <h2 id="proyectos-heading">Proyectos Destacados</h2>
-        <div class="myvacation">
-         <article>
-    <h4>My Vacation</h4>
-    <p><strong>Descripción:</strong> Stop Motion usando solo papael y dibujos hecho por Joaquín Gonzales.</p>
-    <p><strong>Tecnologías utilizadas:</strong> Stop Motion Studio y CapCut.</p>
-    <p><strong>Rol desempeñado:</strong> Director, Productor y Editor.</p>
-    <p><strong>Resultado obtenido:</strong> Un entretenido vídeo usando solo imagenes para crear movimiento.</p>
-    <figure>
-                   <video controls width="560" height="315" preload="metadata"
-    aria-label="Video musical" role="group">
-    <source src="assets/videos/stop.mp4" type="video/mp4">.
-</video>.
-<br>
-</article>
+  <!-- INVESTIGACIONES-->
+  <section class="section" id="investigaciones" aria-labelledby="investigaciones-heading">
+    <div class="contenedor">
+      <h2 id="investigaciones-heading">Investigaciones</h2>
+      <div class="grid grid--3">
+        <article class="tarjeta">
+
+          <h3>Polarización y discurso de odio con sesgo
+de género asociado a la política: análisis
+de las interacciones en Twitter</h3>
+          <p>Descripción breve de la investigación.</p>
+          <a href="https://view.genially.com/6aab5db705ef96e9db5ccf63" target="_blank" rel="noopener">Ver más</a>
+        </article>
+        <article class="tarjeta">
+          <h3>Marvel Rivals: discurso de odio</h3>
+          <p>Cómo aparece el discurso de odio en los hero shooters y sus polémicas en redes sociales desde 2020, con Marvel Rivals como caso central.</p>
+          <a href="https://docs.google.com/document/d/1rjVeKwrRJd168Oqp0t4DmoKmBGkz5jknSh-0Jf72apE/edit?usp=sharing" target="_blank" rel="noopener">Ver más</a>
+        </article>
+        <article class="tarjeta">
+          <h3>Amor líquido</h3>
+          <p>Descripción breve de la investigación.</p>
+          <a href="https://docs.google.com/" target="_blank" rel="noopener">Ver más</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO: formulario de comentario (tu versión) + ventana modal. Lógica en js/manejo.js -->
+  <section class="section comentarios" id="contacto" aria-labelledby="contacto-heading">
+    <div class="contenedor contenedor--texto">
+      <h2 id="contacto-heading">Deja tu comentario</h2>
+      <p>Me interesa conocer tu opinión. ¡Escríbeme!</p>
+
+      <form id="formComentario">
+        <div class="campo">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre completo" required>
         </div>
 
-<div class="sahara">
-<article>
-    <h4>Trailer Sahara</h4>
-    <p><strong>Descripción:</strong> Video con material audiovisual corrompido y arreglado por Joaquín Gonzales.</p>
-    <p><strong>Tecnologías utilizadas:</strong> Adobe Premiere.</p>
-    <p><strong>Rol desempeñado:</strong> Editor.</p>
-    <p><strong>Resultado obtenido:</strong> Problemas solucionas usando unicament el editor.</p>
-    <figure>
-                   <video controls width="560" height="315" preload="metadata"
-    aria-label="Video sahara" role="group">
-    <source src="assets/videos/sahara.mp4" type="video/mp4">
-</video>.
-<br>
-</article>
-</div>
-<br>
-        
+        <div class="campo">
+          <label for="comentario">Tu comentario</label>
+          <textarea id="comentario" name="comentario" placeholder="Escribe aquí tu comentario..." required></textarea>
+        </div>
 
-        <!-- SECCIÓN 8: GALERÍA MULTIMEDIA NATIVAS (FIGURE, PICTURE, AUDIO, VIDEO) -->
-        <section id="portafolio" aria-labelledby="portafolio-heading">
-            <h2 id="portafolio-heading">Galería de Trabajos.</h2>
-            <article>
-                <h3>Fotografía de Presentación</h3>
-                <figure>
-                    <picture>
-                        <source media="(min-width: 250px)" srcset="assets/imagenes/pic.jpg">
-                        <source media="(min-width: 400px)" srcset="assets/imagenes/pic.jpg">
-                        <img src="assets/images/pic.jpg""
-                            alt="Fotgrafía sacada con un telédono TECNO 30C" width="400" loading="lazy">
-                    </picture>
-                    <figcaption>Fotografía por Joaquin Gonzales.</figcaption>
-                </figure>
-            </article>
-            
+        <button type="submit" class="boton btn-guardar">Guardar comentario</button>
+      </form>
+    </div>
 
-            <article>
-                <h3>DEMO de voz</h3>
-                <p>Audio que se uso en la campaña de Titania´s Spa :</p>
-                <figure>
-                    <audio controls preload="metadata"
-                        aria-label="Pista de audio de ensayo de ballet para ejercicios de Adagio en barra" role="group">
-                        <source src="assets/audio/audio.mp3" type="audio/mpeg">
-                    </audio>
-                    <figcaption>Joaquin Gonzales también participa en la grabación </figcaption>
-                </figure>
-            </article>
+    <div id="mensaje" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+      <div class="modal-contenido">
+        <div class="icono-exito">✓</div>
+        <h2 id="modal-titulo">¡Mensaje enviado!</h2>
+        <p>Su mensaje fue enviado correctamente.</p>
+        <span id="nombreEnviado"></span>
+        <button type="button" class="boton" id="cerrarModal">Cerrar</button>
+      </div>
+    </div>
+  </section>
+</main>
 
-            <article>
-                <h3>Prueba Doblaje:</h3>
-                <figure>
-                   <video controls width="315" height="560" preload="metadata"
-    aria-label="Video resumen de las actuaciones del Ballet UCB en 2025" role="group">
-    <source src="assets/videos/dob.mp4" type="video/mp4">
-    Tu navegador no admite la reproducción de video nativo en HTML5.
-</video>.
-                    <figcaption>Practica de los curos de Doblaje</figcaption>
-                </figure>
-            </article>
-        </section>
-
-        <hr>
-
-        <!-- SECCIÓN 9: CONTACTOS -->
-        <section id="contacto" aria-labelledby="contacto-heading">
-            <h2 id="Contacto">Formulario para contactar</h2>
-
-            <form action="#" method="post" enctype="multipart/form-data">
-                <fieldset>
-                    <legend><strong>1. Datos Personales </strong></legend>
-
-                    <p>
-                        <label for="nombre">Nombre Completo (*):</label><br>
-                        <input type="text" id="nombre" name="nombre" required aria-required="true"
-                            placeholder="Ej. Ana María Pérez" minlength="3" maxlength="60">
-                    </p>
-
-                    <p>
-                        <label for="email">Correo (*):</label><br>
-                        <input type="email" id="email" name="email" required aria-required="true"
-                            placeholder="estudiante@ucb.edu.bo">
-                    </p>
-
-                    <p>
-                        <label for="telefono">Número de Teléfono / WhatsApp (*):</label><br>
-                        <input type="tel" id="telefono" name="telefono" required aria-required="true"
-                            aria-describedby="telefono-help" placeholder="+591 70000000"
-                            pattern="(\+591|591)?[67][0-9]{7}"><br>
-                        <small id="telefono-help">Formato: número celular boliviano de 8 dígitos (ej. +591
-                            70000000)</small>
-                    </p>
-
-                     <p>
-                        <label for="comentarios">Comentarios o Consultas:</label><br>
-                        <textarea id="comentarios" name="comentarios" rows="5" cols="50"
-                            placeholder="Escribe aquí cualquier observación relevante..."></textarea>
-                    </p>
-
-                    <p>
-                        <input type="checkbox" id="reglamento" name="reglamento" required aria-required="true">
-                        <label for="reglamento">¿Está seguro de enviar el mensaje?</label>
-                    </p>
-
-                </fieldset>
-                <br>
-                <!-- BOTONES DE ACCIÓN -->
-                <p>
-                    <button type="submit"><strong>Enviar Formulario de Audición</strong></button>
-                    <button type="reset">Limpiar Campos</button>
-                </p>
-            </form>
-        </section>
-        <hr>
-
-
-    <!-- PIE DE PÁGINA NATIVO -->
-    <footer role="contentinfo">
-        <p><small>&copy; 2026 Luis Joaquin Gonzales Costas. Todos los derechos
-                reservados.</small></p>
-        <p><small>Desarrollado como Showcase de Maquetación Nativa HTML5 sin dependencias CSS/JS.</small></p>
-        <p><small>Fecha de última actualización del documento: <time datetime="2026-08-27">27 de Agosto de
-                    2026</time></small></p>
-    </footer>
+<footer class="footer" role="contentinfo">
+  <p>&copy; 2026 Luis Joaquín Gonzales Costas · La Paz, Bolivia</p>
+</footer>
 </body>
 </html>
